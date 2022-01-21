@@ -24,8 +24,8 @@ while True:
 
     frame_resized = rescaleFrame(frame)
 
-    cv.imshow('VIDEO', frame)
-    # cv.imshow('VIDEO', frame_resized)
+    # cv.imshow('VIDEO', frame)
+    cv.imshow('VIDEO', frame_resized)
 
     if cv.waitKey(20) & 0xFF == ord('d'):
         break
