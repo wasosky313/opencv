@@ -1,11 +1,6 @@
 from turtle import shape
 
 import cv2 as cv
-from numpy import interp
-
-# Read image
-# img = cv.imread('Resources\Photos\cat.jpg')
-# cv.imshow('Cat', img)
 
 
 def rescaleFrame(frame, scale=0.75):
@@ -17,7 +12,12 @@ def rescaleFrame(frame, scale=0.75):
     return cv.resize(frame, dimentions, interpolation=cv.INTER_AREA)
 
 
-# # Read video
+# Read image
+img = cv.imread('Resources\Photos\cat.jpg')
+img_resize = rescaleFrame(img)
+cv.imshow('Cat', img_resize)
+
+# Read video
 capture = cv.VideoCapture('Resources\Videos\dog.mp4')
 while True:
     isTrue, frame = capture.read()
